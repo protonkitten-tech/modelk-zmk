@@ -201,8 +201,7 @@
             RC(3,11) RC(3,12) RC(3,13) RC(3,14)
             RC(6,11) RC(6,12) RC(6,13)
             RC(2,11) RC(2,12) RC(2,13) RC(2,14)
-            RC(7,13)          RC(7,11) // I fucked up when rebuilding mine
-            // It's meant to be 7,12; 7,13
+            RC(7,12)          RC(7,13)
         >;
     };
 
