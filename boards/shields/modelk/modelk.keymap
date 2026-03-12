@@ -8,106 +8,106 @@
 #define FUNC   1
 
 / {
-    behaviors {
-        studio_unlock: studio_unlock {
-            compatible = "zmk,behavior-studio-unlock";
-            #binding-cells = <0>;
-        };
-    };
+	behaviors {
+		studio_unlock: studio_unlock {
+			compatible = "zmk,behavior-studio-unlock";
+			#binding-cells = <0>;
+		};
+	};
 
-    keymap {
-        compatible = "zmk,keymap";
+	keymap {
+		compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "Base";
-            bindings = <
-                // **See modelh.overlay**
+		default_layer {
+			display-name = "Base";
+			bindings = <
+				// **See modelh.overlay**
 
-                &kp ESC     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11    &kp F12
-                &kp GRAVE   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp MINUS  &kp EQUAL  &kp BSPC
-                &kp TAB     &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O      &kp P      &kp LBKT   &kp RBKT   &kp ENTER
-                &kp CAPS    &kp A      &kp S      &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT    &kp BSLH
-                &kp LSHIFT  &kp LGUI   &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RSHIFT
-                &kp LCTRL              &kp LALT              &kp SPACE             &lt FUNC RALT         &kp RCTRL
-
-
-                &kp PSCRN &kp SLCK &kp PAUSE_BREAK
-
-                &kp INS &kp HOME &kp PG_UP
-                &kp DEL &kp END &kp PG_DN
-
-                         &kp UP
-                &kp LEFT &kp DOWN &kp RIGHT
-
-                &kp KP_NUM &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS
-                &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_PLUS
-                &kp KP_N4 &kp KP_N5 &kp KP_N6
-                &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_ENTER
-                &kp KP_N0 &kp KP_DOT
-            >;
-        };
-
-        function {
-            display-name = "Function";
-            bindings = <
-                &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR ____     &kp C_PREV     &kp C_PP     &kp C_NEXT    ____    ____    ____    ____
-                ____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____    ____
-                ____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____    ____
-                ____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____
-                ____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____
-                ____              ____              ____              ____              ____
-
-                &studio_unlock ____ &bootloader
-
-                ____ ____ ____
-                ____ ____ ____
-
-                     ____
-                ____ ____ ____
-
-                ____ ____ ____ ____
-                ____ ____ ____ ____
-                ____ ____ ____
-                ____ ____ ____ ____
-                ____ ____
-            >;
-        };
-
-	    // Reserved for ZMK Studio
-        extra1 {
-            status = "reserved";
-        };
-
-        extra2 {
-            status = "reserved";
-        };
-
-	    // Here as a template
-        empty {
-            status = "reserved";
-            bindings = <
-                ____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____
-                ____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____    ____
-                ____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____    ____
-                ____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____
-                ____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____
-                ____              ____              ____              ____              ____
+				&kp ESC     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11    &kp F12
+				&kp GRAVE   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp MINUS  &kp EQUAL  &kp BSPC
+				&kp TAB     &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O      &kp P      &kp LBKT   &kp RBKT   &kp ENTER
+				&kp CAPS    &kp A      &kp S      &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT    &kp BSLH
+				&kp LSHIFT  &kp LGUI   &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RSHIFT
+				&kp LCTRL              &kp LALT              &kp SPACE             &lt FUNC RALT         &kp RCTRL
 
 
-                ____ ____ ____
+				&kp PSCRN &kp SLCK &kp PAUSE_BREAK
 
-                ____ ____ ____
-                ____ ____ ____
+				&kp INS &kp HOME &kp PG_UP
+				&kp DEL &kp END &kp PG_DN
 
-                     ____
-                ____ ____ ____
+				&kp UP
+				&kp LEFT &kp DOWN &kp RIGHT
 
-                ____ ____ ____ ____
-                ____ ____ ____ ____
-                ____ ____ ____
-                ____ ____ ____ ____
-                ____ ____
-            >;
-        };
-    };
+				&kp KP_NUM &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS
+				&kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_PLUS
+				&kp KP_N4 &kp KP_N5 &kp KP_N6
+				&kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_ENTER
+				&kp KP_N0 &kp KP_DOT
+			>;
+		};
+
+		function {
+			display-name = "Function";
+			bindings = <
+				&out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR ____     &kp C_PREV     &kp C_PP     &kp C_NEXT    ____    ____    ____    ____
+				____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____    ____
+				____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____    ____
+				____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____
+				____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____
+				____              ____              ____              ____              ____
+
+				&studio_unlock ____ &bootloader
+
+				____ ____ ____
+				____ ____ ____
+
+				____
+				____ ____ ____
+
+				____ ____ ____ ____
+				____ ____ ____ ____
+				____ ____ ____
+				____ ____ ____ ____
+				____ ____
+			>;
+		};
+
+		// Reserved for ZMK Studio
+		extra1 {
+			status = "reserved";
+		};
+
+		extra2 {
+			status = "reserved";
+		};
+
+		// Here as a template
+		empty {
+			status = "reserved";
+			bindings = <
+				____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____
+				____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____    ____
+				____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____    ____
+				____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____
+				____     ____     ____     ____     ____     ____     ____     ____     ____     ____     ____    ____    ____
+				____              ____              ____              ____              ____
+
+
+				____ ____ ____
+
+				____ ____ ____
+				____ ____ ____
+
+				____
+				____ ____ ____
+
+				____ ____ ____ ____
+				____ ____ ____ ____
+				____ ____ ____
+				____ ____ ____ ____
+				____ ____
+			>;
+		};
+	};
 };
