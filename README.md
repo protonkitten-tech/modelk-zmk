@@ -7,3 +7,10 @@ Some feedback on the docs (might make PRs):
 - Status LEDs?
 
 Shoutout [Model X's](https://github.com/NilsFC/Model-X) firmware
+
+## TODOs
+
+[ ] Implement rp2040 support
+    [ ] Move board specific configs
+        [ ] https://docs.zephyrproject.org/4.1.0/hardware/porting/shields.html#shield-porting-and-configuration
+
